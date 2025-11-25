@@ -9,7 +9,6 @@ use App\Models\Season;
 class ProductController extends Controller
 {
     public function products(){
-        $products = Product::all();
         $products = Product::Paginate(6);
         return view('products', compact('products'));
     }
